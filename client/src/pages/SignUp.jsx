@@ -49,7 +49,7 @@ export default function SignUp() {
   }
   return (
     <div className=' max-w-md  mx-auto p-3 '>
-         <h1 className='text-center font-bold  text-blue-700 text-3xl pb-3'>Signup</h1>
+         <h1 className='text-center font-bold  text-blue-700 text-3xl pb-3'>Sign up</h1>
          <form onSubmit={handleSubmit} className='flex flex-col gap-3  '>
           <input type="text"
           id='username'
