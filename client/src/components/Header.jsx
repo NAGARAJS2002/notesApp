@@ -25,11 +25,10 @@ export default function Header() {
         <Link to={'/'}>  <li className='hidden  text-blue-700 sm:inline hover:underline'>dashboard</li></Link>
         <Link to='/profile'>
             {currentUser ? (
-              <img
-                className='rounded-full h-7 w-7 object-cover'
-                src={currentUser.avatar}
-                alt='profile'
-              />
+              <p className='rounded-full h-8 w-8 bg-blue-700 text-white text-xl uppercase text-center'>
+                
+            {currentUser.username ? currentUser.username[0]: ""}
+              </p>
             ) : (
               <li className=' text-blue-700 hover:underline'> Sign in</li>
             )}

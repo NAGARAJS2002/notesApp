@@ -4,11 +4,13 @@ import mongoose from "mongoose";
 import env from "dotenv";
 import userRouter from "./routes/userRoute.js"
 import authRouter from "./routes/authRoute.js";
+import cookieParser from 'cookie-parser';
 env.config();
 const app = express();
 const port = 3000;
 
-app.use(express.json())
+app.use(express.json());
+app.use(cookieParser())
 
 mongoose.connect(process.env.MONGODB_URL).then(() => {
     console.log('database connected');
