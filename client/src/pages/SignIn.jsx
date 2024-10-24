@@ -40,7 +40,7 @@ const handleSubmit = async (e) => {
     }
 
    dispatch(signInSuccess(data))
-    navigate('/'); 
+    navigate('/dashboard'); 
 
   } catch (error) {
     dispatch(signInFailure(data.message))
