@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import env from "dotenv";
 import userRouter from "./routes/userRoute.js"
 import authRouter from "./routes/authRoute.js";
+import noteRouter from "./routes/noteRoute.js"
 import cookieParser from 'cookie-parser';
 env.config();
 const app = express();
@@ -27,6 +28,7 @@ app.listen(port,() => {
 
 app.use('/api/auth/',authRouter);
 app.use('/api/user/',userRouter);
+app.use('/api/notes/',noteRouter)
 
 app.use((err,req,res,next) => {
     const statusCode = err.statusCode || 500;

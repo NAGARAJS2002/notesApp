@@ -5,17 +5,9 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  content: {
+  description: {
     type: String,
     required: true,
-  },
-  tags: {
-    type: [String],
-    default: [],
-  },
-  isPinned: {
-    type: Boolean,
-    default: false,
   },
   userId: {
     type: String,
